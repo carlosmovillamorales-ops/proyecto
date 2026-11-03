@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#733d85">
+  <meta name="description" content="Yulics Ac Nails — Salón y estudio profesional de uñas. Diseños exclusivos, acrílicas esculpidas, semipermanente, kapping gel, cotizador interactivo y agendamiento directo por WhatsApp.">
+  <title>Yulics Ac Nails | Estudio Profesional de Uñas & Belleza</title>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" id="topBanner">
+    <div class="banner-content">
+      <span class="banner-badge" id="topBannerBadge">✨ NOVEDAD</span>
+      <span id="topBannerText">¡Agenda tu cita esta semana con anticipación y luce uñas impecables!</span>
+      <a href="#agendar" class="banner-link" id="bannerBookBtn">Reservar turno ↗</a>
+      <button class="admin-edit-pill-btn" id="editBannerBtn" type="button" style="padding:2px 8px;font-size:0.7rem;">✏️ Editar Anuncio</button>
+    </div>
+  </aside>
+
+  <!-- Main Sticky Header -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#inicio" aria-label="Yulics Ac Nails - Volver al inicio">
+      <div class="brand-logo-frame">
+        <img src="logo.png" alt="Logo oficial Yulics Ac Nails" class="brand-logo" id="siteBrandLogo">
+      </div>
+      <div class="brand-text">
+        <span class="brand-title" id="siteBrandTitle">Yulics Ac Nails</span>
+        <span class="brand-tagline">UÑAS · BELLEZA · ESTILO</span>
+      </div>
+    </a>
+
+    <!-- Desktop & Mobile Navigation -->
+    <nav class="main-nav" id="mainNav">
+      <a href="#inicio" class="nav-link active">Inicio</a>
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#cotizador" class="nav-link">Cotizador</a>
+      <a href="#galeria" class="nav-link">Galería</a>
+      <a href="#cuidados" class="nav-link">Cuidados</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+      
+      <div class="nav-actions">
+        <!-- Quick Action Book -->
+        <button class="button button-gold button-sm" id="navBookBtn" type="button">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Agendar Cita
+        </button>
+
+        <!-- QR Modal Button -->
+        <button class="button button-outline button-sm icon-only-mobile" id="openScanner" type="button" title="Centro QR">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>QR</span>
+        </button>
+
+        <!-- Admin Mode Switcher -->
+        <button class="button button-gold button-sm admin-toggle-btn" id="toggleAdminMode" type="button" title="Activar modo edición y administración">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <span id="adminToggleText">Modo Edición</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menú de navegación" aria-expanded="false">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </header>
+
+  <!-- Admin Mode Notification Bar (Active when in Admin Mode) -->
+  <div class="admin-bar" id="adminBar" hidden>
+    <div class="admin-bar-content">
+      <div class="admin-bar-status">
+        <span class="admin-pulse-dot"></span>
+        <span><strong>Modo Edición Activo:</strong> Puedes modificar cualquier elemento de la web directamente aquí.</span>
+      </div>
+      <div class="admin-bar-shortcuts">
+        <button type="button" id="barToggleAgendaBtn">🟢 Agenda: Abierta</button>
+        <button type="button" id="barEditHeroBtn">✏️ Hero & Logo</button>
+        <a href="#servicios">📋 Servicios</a>
+        <button type="button" id="barEditCalcBtn">💰 Cotizador</button>
+        <button type="button" id="barAddPhotoBtn">📸 Subir Foto</button>
+        <button type="button" id="barAddReviewBtn">⭐ Testimonio</button>
+        <button type="button" id="barEditHoursBtn">⏰ Horarios</button>
+        <a href="#informacion">📞 Mis Datos</a>
+        <button type="button" id="barResetAllBtn" style="background:#571b29;color:#ffcad4">🔄 Restablecer</button>
+      </div>
+      <div class="admin-bar-actions">
+        <button class="button button-xs button-outline" id="exitAdminMode" type="button">Salir del modo edición</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+      <div class="hero-backdrop-glow"></div>
+      
+      <div class="hero-copy">
+        <div class="hero-badge-wrap">
+          <span class="badge-pill" id="heroBadgeText">
+            <span class="pulse-sparkle">✦</span>
+            STUDIO PROFESIONAL DE UÑAS
+          </span>
+          <span class="status-live-pill" id="heroLiveStatus" title="Estado de la agenda (Haz clic para alternar en modo edición)">
+            <span class="live-dot"></span> <span id="heroLiveStatusText">Agenda abierta</span>
+          </span>
+          <button class="admin-edit-pill-btn" id="inlineToggleAgendaBtn" type="button" title="Alternar entre Agenda abierta y Agenda no disponible">🔄 Disponibilidad</button>
+          <button class="admin-edit-pill-btn" id="editHeroBtn" type="button">✏️ Editar Textos & Logo</button>
+        </div>
+
+        <h1 class="hero-title">
+          <span id="heroTitleMain">Arte, elegancia y</span> <br>
+          <span class="hero-title-italic" id="heroTitleItalic">durabilidad en tus manos.</span>
+        </h1>
+
+        <p class="hero-subtitle" id="heroSubtitleText">
+          Especialista en uñas acrílicas esculpidas, esmaltado semipermanente de alta retención, nivelación kapping y nail art personalizado. Creamos el estilo perfecto para resaltar tu belleza.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="button button-primary button-lg" id="heroBookBtn" type="button">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Agendar por WhatsApp
+          </button>
+          
+          <a href="#cotizador" class="button button-outline button-lg">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            Cotizar mi diseño
+          </a>
+          
+          <a href="#servicios" class="button button-ghost button-lg">
+            Ver catálogo <span>↓</span>
+          </a>
+        </div>
+
+        <!-- Social Proof Trust Badges -->
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <div class="trust-stars">★★★★★</div>
+            <span><strong>100%</strong> Calidad garantizada</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-icon">💎</span>
+            <span>Materiales de grado profesional</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-icon">🛡️</span>
+            <span>Máxima bioseguridad y desinfección</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card with Brand Logo & Floating Badges -->
+      <div class="hero-visual">
+        <div class="hero-card-glow"></div>
+        <div class="hero-card">
+          <div class="logo-outer-ring">
+            <div class="logo-inner-ring">
+              <img src="logo.png" alt="Yulics Ac Nails" class="hero-logo-img">
+            </div>
+          </div>
+          
+          <div class="hero-card-info">
+            <h3 id="heroCardBrandName">Yulics Ac Nails</h3>
+            <p id="heroCardBio">Tu estilo, tu esencia · Manicura profesional</p>
+          </div>
+
+          <!-- Floating Interactive Pills -->
+          <div class="floating-badge badge-top-right">
+            <span class="badge-icon">💅</span>
+            <div>
+              <strong>Acrílicas & Kapping</strong>
+              <small>Retención 21+ días</small>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <span class="badge-icon">✨</span>
+            <div>
+              <strong>Nail Art en Tendencia</strong>
+              <small>Mano alzada & Cristalería</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK HIGHLIGHTS / STATS STRIP -->
+    <section class="highlights-strip">
+      <div class="highlights-container">
+        <div class="highlight-box">
+          <div class="highlight-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="highlight-text">
+            <strong id="statHoursTitle">Horario de Atención</strong>
+            <span id="statHoursSubtitle">Lunes a Sábado: 8:30 a. m. - 7:00 p. m.</span>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div class="highlight-text">
+            <strong>Bioseguridad Total</strong>
+            <span>Esterilización y limas desechables</span>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <div class="highlight-text">
+            <strong id="statServicesCount">Servicios Registrados</strong>
+            <span>Precios claros y sin sorpresas</span>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-icon">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="highlight-text">
+            <strong id="statCityLocation">Atención en Estudio</strong>
+            <span id="statHomeService">Opcional a domicilio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: SERVICES & PRICES -->
+    <section class="section" id="servicios">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-eyebrow">CATÁLOGO EXCLUSIVO</span>
+          <h2 class="section-title">Nuestros Servicios & Tarifas</h2>
+          <p class="section-desc">Selecciona tu servicio favorito y agenda tu cita al instante con precio confirmado.</p>
+        </div>
+        <div class="section-actions" id="adminServicesActions">
+          <button class="button button-primary" id="addService" type="button">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Agregar Servicio
+          </button>
+        </div>
+      </div>
+
+      <!-- Services Filter & Search Controls -->
+      <div class="catalog-controls">
+        <div class="search-input-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="search" id="serviceSearchInput" placeholder="Buscar por nombre o descripción (ej. Acrílicas, Kapping, Retiro)..." autocomplete="off">
+          <button type="button" class="clear-search-btn" id="clearSearchBtn" aria-label="Limpiar búsqueda" hidden>×</button>
+        </div>
+
+        <div class="category-pills" id="categoryFilterBar">
+          <button type="button" class="category-pill active" data-category="all">Todos</button>
+          <button type="button" class="category-pill" data-category="Semipermanente">Semipermanente</button>
+          <button type="button" class="category-pill" data-category="Nivelación / Kapping">Dipping / Nivelación</button>
+          <button type="button" class="category-pill" data-category="Soft Gel / Press On">Soft Gel</button>
+          <button type="button" class="category-pill" data-category="Mantenimiento / Retiro">Retiro & Extras</button>
+          <button type="button" class="category-pill" data-category="Nail Art / Diseños">Decoración</button>
+        </div>
+      </div>
+
+      <!-- Service Cards Grid -->
+      <div id="serviceList" class="service-grid"></div>
+
+      <!-- Empty State for Services -->
+      <div id="noServices" class="empty-state" hidden>
+        <div class="empty-icon-wrap">
+          <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        </div>
+        <h3>No encontramos servicios con este criterio</h3>
+        <p>Prueba con otra palabra en el buscador o limpia los filtros para ver todos los servicios.</p>
+        <div class="empty-actions">
+          <button class="button button-outline" id="resetCatalogFilters">Ver todos los servicios</button>
+          <button class="button button-gold" id="loadDefaultServicesBtn" type="button">Cargar catálogo recomendado</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE PRICE CALCULATOR (COTIZADOR DE UÑAS) -->
+    <section class="section calculator-section" id="cotizador">
+      <div class="section-header center">
+        <span class="section-eyebrow">HERRAMIENTA INTERACTIVA</span>
+        <h2 class="section-title">Cotizador de Diseño a Tu Medida</h2>
+        <p class="section-desc">Personaliza la técnica base, el largo, la forma y los detalles decorativos para obtener un presupuesto estimado al instante.</p>
+        <button class="admin-edit-pill-btn" id="editCalcPricesBtn" type="button" style="margin-top:14px;">⚙️ Configurar Precios del Cotizador</button>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calc-grid">
+          <!-- Step 1: Base Technique -->
+          <div class="calc-group">
+            <label class="calc-label">
+              <span class="step-num">1</span>
+              <span>Técnica o Sistema Base:</span>
+            </label>
+            <div class="option-grid" id="calcBaseGrid">
+              <label class="option-card active">
+                <input type="radio" name="calcBase" value="semipermanente" data-name="Semi Manos Liso" data-price="30000" checked>
+                <div class="option-content">
+                  <span class="option-title">Semi Manos Liso</span>
+                  <span class="option-badge">$30.000 COP</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcBase" value="acrilicas" data-name="Base Rubber + Semi" data-price="45000">
+                <div class="option-content">
+                  <span class="option-title">Base Rubber + Semi</span>
+                  <span class="option-badge">$45.000 COP</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcBase" value="kapping" data-name="Dipping" data-price="45000">
+                <div class="option-content">
+                  <span class="option-title">Dipping</span>
+                  <span class="option-badge">$45.000 COP</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcBase" value="softgel" data-name="Soft Gel Liso" data-price="55000">
+                <div class="option-content">
+                  <span class="option-title">Soft Gel Liso</span>
+                  <span class="option-badge">$55.000 COP</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Length -->
+          <div class="calc-group">
+            <label class="calc-label">
+              <span class="step-num">2</span>
+              <span>Largo deseado:</span>
+            </label>
+            <div class="option-grid cols-4" id="calcLengthGrid">
+              <label class="option-card active">
+                <input type="radio" name="calcLength" value="natural" data-name="Largo Natural / N° 1" data-price="0" checked>
+                <div class="option-content">
+                  <span class="option-title">Natural / N° 1</span>
+                  <small>Sin recargo</small>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcLength" value="medio" data-name="Largo N° 2 - 3" data-price="10000">
+                <div class="option-content">
+                  <span class="option-title">Medio N° 2-3</span>
+                  <small>+$10.000</small>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcLength" value="largo" data-name="Largo N° 4 - 5" data-price="20000">
+                <div class="option-content">
+                  <span class="option-title">Largo N° 4-5</span>
+                  <small>+$20.000</small>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcLength" value="extralargo" data-name="Extra Largo N° 6+" data-price="30000">
+                <div class="option-content">
+                  <span class="option-title">Extra N° 6+</span>
+                  <small>+$30.000</small>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 3: Shape -->
+          <div class="calc-group">
+            <label class="calc-label">
+              <span class="step-num">3</span>
+              <span>Forma de la uña:</span>
+            </label>
+            <div class="option-grid cols-4" id="calcShapeGrid">
+              <label class="option-card active">
+                <input type="radio" name="calcShape" value="cuadrada" data-name="Cuadrada" checked>
+                <div class="option-content">
+                  <span class="option-title">Cuadrada</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcShape" value="almendra" data-name="Almendra (Almond)">
+                <div class="option-content">
+                  <span class="option-title">Almendra</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcShape" value="coffin" data-name="Coffin / Ballerina">
+                <div class="option-content">
+                  <span class="option-title">Coffin</span>
+                </div>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="calcShape" value="stiletto" data-name="Stiletto">
+                <div class="option-content">
+                  <span class="option-title">Stiletto</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 4: Art & Effects (Checkboxes) -->
+          <div class="calc-group">
+            <label class="calc-label">
+              <span class="step-num">4</span>
+              <span>Efectos & Nail Art Adicionales:</span>
+            </label>
+            <div class="option-grid cols-2" id="calcAddonsGrid">
+              <label class="option-card checkbox-card">
+                <input type="checkbox" name="calcAddon" value="french" data-name="Francesa Clásica / Baby Boomer" data-price="6000">
+                <div class="option-content">
+                  <span class="option-title">Francesa / Baby Boomer</span>
+                  <small>+$6.000 COP</small>
+                </div>
+              </label>
+              <label class="option-card checkbox-card">
+                <input type="checkbox" name="calcAddon" value="cromo" data-name="Efecto Glazed / Espejo / Aurora" data-price="6000">
+                <div class="option-content">
+                  <span class="option-title">Efecto Cromo / Glazed</span>
+                  <small>+$6.000 COP</small>
+                </div>
+              </label>
+              <label class="option-card checkbox-card">
+                <input type="checkbox" name="calcAddon" value="cristales" data-name="Pedrería y Cristales de lujo" data-price="6000">
+                <div class="option-content">
+                  <span class="option-title">Cristales & Pedrería</span>
+                  <small>+$6.000 COP</small>
+                </div>
+              </label>
+              <label class="option-card checkbox-card">
+                <input type="checkbox" name="calcAddon" value="nailart" data-name="Nail Art a mano alzada (diseños)" data-price="6000">
+                <div class="option-content">
+                  <span class="option-title">Nail Art Mano Alzada</span>
+                  <small>+$6.000 COP</small>
+                </div>
+              </label>
+              <label class="option-card checkbox-card">
+                <input type="checkbox" name="calcAddon" value="retiro" data-name="Retiro de sistema anterior" data-price="10000">
+                <div class="option-content">
+                  <span class="option-title">Retiro de sistema previo</span>
+                  <small>+$10.000 COP</small>
+                </div>
+              </label>
+              <label class="option-card checkbox-card">
+                <input type="checkbox" name="calcAddon" value="domicilio" data-name="Atención a domicilio" data-price="15000">
+                <div class="option-content">
+                  <span class="option-title">Servicio a Domicilio</span>
+                  <small>+$15.000 COP</small>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculator Result & WhatsApp CTA -->
+        <div class="calc-summary-panel">
+          <div class="calc-summary-header">
+            <span class="eyebrow">PRESUPUESTO ESTIMADO</span>
+            <div class="calc-total-display">
+              <span class="calc-total-amount" id="calcTotalAmount">$30.000</span>
+              <span class="calc-currency">COP</span>
+            </div>
+            <p class="calc-note">* El valor final puede variar ligeramente según la complejidad exacta del diseño al momento de la sesión.</p>
+          </div>
+
+          <div class="calc-breakdown" id="calcBreakdown">
+            <!-- Dynamic Breakdown items injected here -->
+          </div>
+
+          <div class="calc-actions">
+            <button class="button button-whatsapp button-lg w-100" id="sendQuoteWhatsApp" type="button">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              Enviar esta cotización por WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INSPIRATION GALLERY -->
+    <section class="section gallery-section" id="galeria">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">PORTAFOLIO DE INSPIRACIÓN</span>
+          <h2 class="section-title">Galería de Diseños & Estilos</h2>
+          <p class="section-desc">Inspírate con las últimas tendencias. Puedes solicitar cualquiera de estos estilos en tu cita.</p>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+          <div class="gallery-category-nav" id="galleryFilterNav">
+            <button type="button" class="gallery-filter-btn active" data-filter="all">Todos</button>
+            <button type="button" class="gallery-filter-btn" data-filter="glam">Glam & Cristales</button>
+            <button type="button" class="gallery-filter-btn" data-filter="clean">Clean & Nude</button>
+            <button type="button" class="gallery-filter-btn" data-filter="french">French Moderno</button>
+            <button type="button" class="gallery-filter-btn" data-filter="art">Artístico</button>
+          </div>
+          <button class="admin-edit-pill-btn" id="addGalleryPhotoBtn" type="button">📸 Subir Foto a Galería</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered by JS with interactive preview & quick WhatsApp inquiry -->
+      </div>
+    </section>
+
+    <!-- SECTION: NAIL AFTERCARE GUIDE -->
+    <section class="section aftercare-section" id="cuidados">
+      <div class="section-header center">
+        <span class="section-eyebrow">SALUD Y DURABILIDAD</span>
+        <h2 class="section-title">Guía de Cuidados para tus Uñas</h2>
+        <p class="section-desc">Sigue estas recomendaciones profesionales para conservar tu set impecable por hasta 4 semanas.</p>
+        <button class="admin-edit-pill-btn" id="editAftercareBtn" type="button" style="margin-top:14px;">✏️ Modificar Consejos de Cuidado</button>
+      </div>
+
+      <div class="aftercare-grid" id="aftercareGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- SECTION: CLIENT TESTIMONIALS -->
+    <section class="section testimonials-section">
+      <div class="section-header center">
+        <span class="section-eyebrow">EXPERIENCIAS REALES</span>
+        <h2 class="section-title">Lo que dicen nuestras clientas</h2>
+        <p class="section-desc">La satisfacción y confianza de cada persona que pasa por nuestro estudio es nuestra mejor carta de presentación.</p>
+        <button class="admin-edit-pill-btn" id="addTestimonialBtn" type="button" style="margin-top:14px;">＋ Agregar Testimonio</button>
+      </div>
+
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- CONTACT & APPOINTMENT BANNER -->
+    <section class="contact-band" id="contacto">
+      <div class="contact-band-art">
+        <div class="contact-symbol-wrap">
+          <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </div>
+      </div>
+      <div class="contact-text">
+        <span class="eyebrow-light">¿LISTA PARA TUS NUEVAS UÑAS?</span>
+        <h2>Hablemos de tu próximo diseño.</h2>
+        <p id="contactBandDesc">Consulta disponibilidad de horarios, despeja tus dudas o reserva tu turno directo a nuestro WhatsApp.</p>
+        <div class="contact-badges-wrap">
+          <span class="info-pill"><strong id="contactPhoneDisplay">WhatsApp Activo</strong></span>
+          <span class="info-pill" id="contactLocationDisplay">Atención personalizada</span>
+          <span class="info-pill" id="contactHoursDisplay">Horario flexible</span>
+          <button class="admin-edit-pill-btn" id="editHoursBtn" type="button">⏰ Modificar Horario</button>
+        </div>
+      </div>
+      <div class="contact-band-cta">
+        <button class="button button-whatsapp button-lg" id="directWhatsAppBtn" type="button">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          Abrir chat en WhatsApp
+        </button>
+        <button class="button button-light" id="openBookingWizardBtn" type="button">
+          Completar formulario de cita
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION: BUSINESS MANAGEMENT & SETTINGS (MODO DUEÑA / ADMIN) -->
+    <section class="section info-section" id="informacion">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">PANEL ADMINISTRATIVO</span>
+          <h2 class="section-title">Información de Tu Negocio</h2>
+          <p class="section-desc">Actualiza tus canales de contacto, horarios y detalles que verán tus clientas en toda la web.</p>
+        </div>
+        <div class="local-badge">
+          <span class="badge-dot"></span>
+          <span>Sincronizado en este navegador</span>
+        </div>
+      </div>
+
+      <form id="businessForm" class="form-card">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="businessName">Nombre del negocio / Marca *</label>
+            <input id="businessName" name="businessName" required maxlength="80" value="Yulics Ac Nails" placeholder="Ej. Yulics Ac Nails">
+          </div>
+
+          <div class="form-field">
+            <label for="ownerName">Nombre de la manicurista / responsable</label>
+            <input id="ownerName" name="ownerName" maxlength="80" placeholder="Ej. Yulics">
+          </div>
+
+          <div class="form-field">
+            <label for="phone">WhatsApp con código de país (sin +) *</label>
+            <div class="input-with-prefix">
+              <span class="input-prefix">📞</span>
+              <input id="phone" name="phone" inputmode="tel" maxlength="20" placeholder="Ej. 573053769192">
+            </div>
+            <small>Para Colombia usa 57 seguido de los 10 dígitos (ej. 573053769192).</small>
+          </div>
+
+          <div class="form-field">
+            <label for="instagram">Instagram o red social</label>
+            <div class="input-with-prefix">
+              <span class="input-prefix">📸</span>
+              <input id="instagram" name="instagram" maxlength="160" placeholder="@yulics_ac_nails o enlace completo">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="city">Ciudad / Municipio</label>
+            <input id="city" name="city" maxlength="70" placeholder="Ej. Santa Marta, Colombia">
+          </div>
+
+          <div class="form-field">
+            <label for="address">Dirección del estudio o zona de cobertura</label>
+            <input id="address" name="address" maxlength="150" placeholder="Ej. Bonda, Santa Marta">
+          </div>
+
+          <div class="form-field">
+            <label for="hours">Horario de atención</label>
+            <input id="hours" name="hours" maxlength="120" placeholder="Ej. Lunes a Sábado: 8:30 a.m. - 7:00 p.m.">
+          </div>
+
+          <div class="form-field">
+            <label for="homeService">¿Ofreces servicio a domicilio?</label>
+            <select id="homeService" name="homeService">
+              <option value="no">No (Solo en estudio)</option>
+              <option value="si">Sí (Disponible a domicilio)</option>
+              <option value="consultar">Consultar disponibilidad y zona</option>
+            </select>
+          </div>
+
+          <div class="form-field form-full">
+            <label for="description">Descripción / Presentación de tu negocio</label>
+            <textarea id="description" name="description" rows="3" maxlength="600" placeholder="Describe tu experiencia, certificaciones, técnicas favoritas y qué hace única la experiencia con tus clientas."></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+            Guardar Información
+          </button>
+          <button class="button button-outline" type="button" id="copyShareLink">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            Copiar enlace para Instagram / Bio
+          </button>
+          <button class="button button-ghost" type="button" id="resetBusiness">Restaurar valores iniciales</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- SECTION: QR CODE HUB (GENERAR Y ESCANEAR) -->
+    <section class="section qr-hub-section" id="qr">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">HERRAMIENTAS DIGITALES</span>
+          <h2 class="section-title">Centro de Códigos QR</h2>
+          <p class="section-desc">Genera tu propio código QR para colocar en tu mesa o redes, o escanea códigos desde la cámara o imágenes.</p>
+        </div>
+        <div class="qr-tabs" id="qrTabs">
+          <button type="button" class="tab-btn active" data-tab="generate">Generar mi QR</button>
+          <button type="button" class="tab-btn" data-tab="scan">Escanear QR</button>
+        </div>
+      </div>
+
+      <div class="qr-hub-card">
+        <!-- TAB 1: GENERATE QR -->
+        <div class="qr-tab-panel active" id="tabGenerateQR">
+          <div class="qr-gen-layout">
+            <div class="qr-gen-controls">
+              <h3>Crea un código QR para tus clientas</h3>
+              <p>Elige qué quieres que se abra cuando alguien escanee tu código QR:</p>
+
+              <div class="qr-type-selector">
+                <label class="qr-type-radio">
+                  <input type="radio" name="qrTargetType" value="whatsapp" checked>
+                  <span>Chat directo de WhatsApp</span>
+                </label>
+                <label class="qr-type-radio">
+                  <input type="radio" name="qrTargetType" value="web">
+                  <span>Página web de Yulics Ac Nails</span>
+                </label>
+                <label class="qr-type-radio">
+                  <input type="radio" name="qrTargetType" value="instagram">
+                  <span>Instagram (@nails_yulics_ac)</span>
+                </label>
+                <label class="qr-type-radio">
+                  <input type="radio" name="qrTargetType" value="custom">
+                  <span>Enlace personalizado</span>
+                </label>
+              </div>
+
+              <div class="form-field" id="customQrWrap" hidden>
+                <label for="customQrUrl">Ingresa el enlace o texto del QR:</label>
+                <input id="customQrUrl" type="url" placeholder="https://instagram.com/tu_cuenta">
+              </div>
+
+              <div class="qr-gen-btn-row">
+                <button class="button button-primary" id="regenerateQrBtn" type="button">Actualizar QR</button>
+                <button class="button button-gold" id="downloadQrBtn" type="button">
+                  <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  Descargar Imagen del QR
+                </button>
+              </div>
+            </div>
+
+            <div class="qr-display-frame">
+              <div class="qr-canvas-card">
+                <div class="qr-brand-header">
+                  <img src="logo.png" alt="" class="qr-small-logo">
+                  <strong>Yulics Ac Nails</strong>
+                </div>
+                <div id="qrCanvasContainer" class="qr-container">
+                  <!-- QR Canvas or SVG generated here -->
+                </div>
+                <span class="qr-instruction">Escanea con tu cámara para conectar</span>
+              </div>
+
+              <!-- CÓDIGO QR DE INSTAGRAM DIRECTAMENTE DEBAJO DEL OTRO CÓDIGO -->
+              <div class="qr-canvas-card qr-canvas-card-ig" id="sectionInstagramCard">
+                <div class="qr-brand-header">
+                  <svg class="svg-icon ig-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px;stroke:#e1306c">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <strong id="sectionInstagramHandle">@nails_yulics_ac</strong>
+                </div>
+                <a href="https://www.instagram.com/nails_yulics_ac?mdxt=OXR3bjdmbHFrb3Rq" target="_blank" rel="noopener noreferrer" class="qr-container qr-ig-link" id="sectionInstagramQrLink" title="Toca o escanea para abrir Instagram @nails_yulics_ac">
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;margin=8&amp;data=https%3A%2F%2Fwww.instagram.com%2Fnails_yulics_ac%3Fmdxt%3DOXR3bjdmbHFrb3Rq" alt="Código QR Instagram @nails_yulics_ac" id="sectionInstagramQrImg" width="200" height="200">
+                </a>
+                <span class="qr-instruction">Código QR de Instagram · Escanea o toca para seguirnos</span>
+                <div class="qr-card-btn-row">
+                  <a href="https://www.instagram.com/nails_yulics_ac?mdxt=OXR3bjdmbHFrb3Rq" target="_blank" rel="noopener noreferrer" class="button button-primary button-xs" id="sectionInstagramBtn">
+                    Ver perfil ↗
+                  </a>
+                  <button type="button" class="button button-gold button-xs" id="downloadInstagramQrBtn">
+                    Descargar QR
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: SCAN QR -->
+        <div class="qr-tab-panel" id="tabScanQR" hidden>
+          <div class="qr-scan-layout">
+            <div class="scanner-container">
+              <div class="camera-stage" id="cameraStage">
+                <video id="cameraVideo" playsinline muted></video>
+                <div id="cameraPlaceholder" class="camera-placeholder">
+                  <span class="cam-icon">📷</span>
+                  <strong>Cámara apagada</strong>
+                  <p>Presiona “Activar cámara” para enfocar un código QR.</p>
+                </div>
+                <div class="scanner-reticle" id="scannerReticle" hidden>
+                  <div class="reticle-line"></div>
+                </div>
+              </div>
+
+              <div class="scanner-controls">
+                <button class="button button-primary" id="startScan" type="button">Activar cámara</button>
+                <button class="button button-outline" id="stopScan" type="button" disabled>Detener cámara</button>
+                <label class="button button-light file-label">
+                  Subir imagen con QR
+                  <input type="file" id="qrImageFileInput" accept="image/*" hidden>
+                </label>
+              </div>
+            </div>
+
+            <div class="scanner-result-panel">
+              <h3>Resultado de la lectura</h3>
+              <div class="scan-result-box" id="scanResult">Aún no se ha detectado ningún código QR.</div>
+
+              <div class="manual-scan-box">
+                <label for="manualQr">O pega el texto o enlace manualmente:</label>
+                <div class="manual-input-row">
+                  <input id="manualQr" placeholder="Escribe o pega aquí el código...">
+                  <button type="button" class="button button-light" id="useManualQr">Ver</button>
+                </div>
+              </div>
+
+              <small class="scan-note">
+                💡 <em>Nota sobre la cámara:</em> Si estás abriendo el archivo local en el navegador, algunos sistemas requieren HTTPS o localhost para encender la cámara. La opción de “Subir imagen con QR” o el ingreso manual funcionan siempre.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKUP & DATA MANAGEMENT SECTION -->
+    <section class="backup-section">
+      <div class="backup-copy">
+        <span class="eyebrow">SEGURIDAD Y CONTROL DE TUS DATOS</span>
+        <h2>Respaldo y Recuperación</h2>
+        <p>Tus servicios e información quedan guardados de forma segura en tu navegador. Descarga una copia en formato JSON para guardar tu catálogo o pasarlo a tu celular o computadora.</p>
+      </div>
+      <div class="backup-actions">
+        <button class="button button-outline" id="exportData" type="button">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Descargar copia de seguridad
+        </button>
+        <label for="importFile" class="button button-light file-label">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          Restaurar desde JSON
+        </label>
+        <input type="file" id="importFile" accept=".json,application/json" hidden>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="logo.png" alt="Yulics Ac Nails" class="footer-logo">
+        </div>
+        <div>
+          <span class="footer-title">Yulics Ac Nails</span>
+          <p class="footer-tagline">Uñas bonitas, estilo único y cuidado profesional.</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <strong>Navegación</strong>
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#cotizador">Cotizador</a>
+          <a href="#galeria">Galería</a>
+        </div>
+        <div class="footer-col">
+          <strong>Contacto</strong>
+          <a href="#" id="footerWhatsAppLink" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="#" id="footerInstagramLink" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#contacto">Ubicación & Horarios</a>
+        </div>
+        <div class="footer-col">
+          <strong>Gestión</strong>
+          <a href="#informacion">Panel Dueña</a>
+          <a href="#qr">Códigos QR</a>
+          <button type="button" class="footer-link-btn" id="footerToggleAdmin">Activar Modo Edición</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> Yulics Ac Nails · Todos los derechos reservados.</small>
+      <small>Diseñado con pasión para el arte de las uñas.</small>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTION BUTTON (WHATSAPP QUICK DIAL) -->
+  <aside class="floating-cta" id="floatingCta">
+    <button class="fab-whatsapp" id="fabWhatsAppBtn" type="button" aria-label="Abrir chat en WhatsApp con Yulics">
+      <span class="fab-pulse"></span>
+      <svg class="svg-icon-fab" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+      <span class="fab-label">¿Dudas? ¡Escríbeme!</span>
+    </button>
+  </aside>
+
+  <!-- ==================== MODAL DIALOGS ==================== -->
+
+  <!-- 1. APPOINTMENT BOOKING WIZARD MODAL -->
+  <dialog id="bookingDialog" class="dialog">
+    <div class="dialog-heading">
+      <div>
+        <span class="eyebrow">AGENDAR SESIÓN</span>
+        <h2>Reserva tu Cita</h2>
+        <p class="dialog-subtitle">Completa los datos y se enviará un mensaje organizado directo a nuestro WhatsApp.</p>
+      </div>
+      <button type="button" class="icon-button" id="closeBookingDialog" aria-label="Cerrar modal">×</button>
+    </div>
+
+    <form id="bookingForm" class="booking-form" autocomplete="off">
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="bookClientName">Tu Nombre Completo *</label>
+          <input id="bookClientName" required autocomplete="off" placeholder="Ej. Camila Morales">
+        </div>
+
+        <div class="form-field">
+          <label for="bookClientPhone">Tu Teléfono / WhatsApp *</label>
+          <div class="input-with-prefix">
+            <span class="input-prefix">📱</span>
+            <input id="bookClientPhone" type="tel" inputmode="tel" required autocomplete="off" maxlength="20" placeholder="Ej. 3051234567">
+          </div>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="bookServiceSelect">Servicio que deseas realizarte *</label>
+          <select id="bookServiceSelect" required>
+            <!-- Injected by JS based on registered services -->
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="bookDate">Fecha preferida *</label>
+          <input type="date" id="bookDate" required>
+        </div>
+
+        <div class="form-field">
+          <label for="bookTime">Franja horaria preferida *</label>
+          <select id="bookTime" required>
+            <option value="Mañana (9:00 a.m. - 12:00 p.m.)">Mañana (9:00 a.m. - 12:00 p.m.)</option>
+            <option value="Tarde (1:00 p.m. - 4:00 p.m.)" selected>Tarde (1:00 p.m. - 4:00 p.m.)</option>
+            <option value="Final de tarde (4:30 p.m. - 7:30 p.m.)">Final de tarde (4:30 p.m. - 7:30 p.m.)</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="bookLocation">Modalidad de atención</label>
+          <select id="bookLocation">
+            <option value="En el estudio">En el estudio</option>
+            <option value="A domicilio (sujeto a disponibilidad y zona)">A domicilio (consultar zona)</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="bookHasPrevious">¿Traes uñas para retiro?</label>
+          <select id="bookHasPrevious">
+            <option value="No, mis uñas están limpias">No, uñas limpias</option>
+            <option value="Sí, traigo acrílico / semipermanente previo">Sí, necesito retiro</option>
+          </select>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="bookNotes">Detalles del diseño o notas adicionales</label>
+          <textarea id="bookNotes" rows="2" placeholder="Ej. Quiero un diseño con efecto cromo, tengo una uña partida, etc."></textarea>
+        </div>
+      </div>
+
+      <div class="booking-preview-card">
+        <div class="preview-header">
+          <span>Vista previa del mensaje a WhatsApp:</span>
+        </div>
+        <div class="preview-text" id="bookingPreviewText">
+          Completa tus datos para previsualizar el mensaje de reserva.
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button-whatsapp button-lg" type="submit">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          Confirmar y Enviar a WhatsApp
+        </button>
+        <button type="button" class="button button-outline" id="cancelBooking">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- 2. SERVICE ADD/EDIT MODAL (ADMIN) -->
+  <dialog id="serviceDialog" class="dialog">
+    <form id="serviceForm" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">ADMINISTRAR SERVICIO</span>
+          <h2 id="serviceDialogTitle">Agregar Servicio</h2>
+          <p class="dialog-subtitle">Ingresa los datos para que aparezca en el catálogo y cotizador.</p>
+        </div>
+        <button type="button" class="icon-button" id="closeServiceDialog" aria-label="Cerrar modal">×</button>
+      </div>
+
+      <input type="hidden" id="serviceId">
+
+      <div class="form-grid">
+        <div class="form-field form-full">
+          <label for="serviceName">Nombre del servicio *</label>
+          <input id="serviceName" required maxlength="100" placeholder="Ej. Uñas Acrílicas Esculpidas">
+        </div>
+
+        <div class="form-field">
+          <label for="serviceCategory">Categoría</label>
+          <select id="serviceCategory">
+            <option value="Acrílicas">Acrílicas</option>
+            <option value="Semipermanente">Semipermanente</option>
+            <option value="Nivelación / Kapping">Nivelación / Kapping</option>
+            <option value="Soft Gel / Press On">Soft Gel / Press On</option>
+            <option value="Mantenimiento / Retiro">Mantenimiento / Retiro</option>
+            <option value="Nail Art / Diseños">Nail Art / Diseños</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="servicePrice">Precio en COP (Solo números) *</label>
+          <input id="servicePrice" inputmode="numeric" required maxlength="20" placeholder="Ej. 75000">
+        </div>
+
+        <div class="form-field">
+          <label for="serviceDuration">Duración estimada</label>
+          <input id="serviceDuration" maxlength="50" placeholder="Ej. 1 hora y 45 minutos">
+        </div>
+
+        <div class="form-field">
+          <label for="serviceBadge">Etiqueta destacada (Opcional)</label>
+          <input id="serviceBadge" maxlength="40" placeholder="Ej. Más pedido, Recomendado, Tendencia">
+        </div>
+
+        <div class="form-field form-full">
+          <label for="serviceDescription">Descripción detallada</label>
+          <textarea id="serviceDescription" rows="3" maxlength="300" placeholder="Explica qué incluye el procedimiento, beneficios y cuidados."></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button-primary" type="submit">Guardar Servicio</button>
+        <button type="button" class="button button-outline" id="cancelService">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- 3. GALLERY IMAGE PREVIEW LIGHTBOX MODAL -->
+  <dialog id="galleryDialog" class="dialog gallery-dialog">
+    <div class="dialog-heading">
+      <div>
+        <span class="eyebrow" id="lightboxCategory">ESTILO YULICS</span>
+        <h2 id="lightboxTitle">Detalle del Diseño</h2>
+      </div>
+      <button type="button" class="icon-button" id="closeGalleryDialog" aria-label="Cerrar vista previa">×</button>
+    </div>
+
+    <div class="lightbox-body">
+      <div class="lightbox-image-wrap">
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+      </div>
+      <div class="lightbox-info">
+        <p id="lightboxDescription" class="lightbox-desc"></p>
+        <div class="lightbox-features">
+          <div class="feature-item">
+            <strong>Técnica recomendada:</strong>
+            <span id="lightboxTechnique">Acrílicas / Kapping</span>
+          </div>
+          <div class="feature-item">
+            <strong>Tiempo de elaboración:</strong>
+            <span id="lightboxTime">Aprox. 2 horas</span>
+          </div>
+        </div>
+        <div class="lightbox-actions">
+          <button class="button button-whatsapp w-100" id="lightboxWhatsAppBtn" type="button">
+            Pedir un diseño similar por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- 4. HERO & LOGO EDIT MODAL (ADMIN) -->
+  <dialog id="heroEditDialog" class="dialog">
+    <form id="heroEditForm" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">PERSONALIZACIÓN TOTAL</span>
+          <h2>Editar Textos del Hero & Logo</h2>
+          <p class="dialog-subtitle">Cambia la presentación principal de la página y el logotipo de tu marca.</p>
+        </div>
+        <button type="button" class="icon-button" id="closeHeroEditDialog" aria-label="Cerrar modal">×</button>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field form-full">
+          <label for="editTopBanner">Texto del anuncio superior</label>
+          <input id="editTopBanner" maxlength="150" placeholder="¡Agenda tu cita esta semana con anticipación!">
+        </div>
+
+        <div class="form-field form-full">
+          <label for="editHeroBadge">Insignia / Etiqueta del Hero</label>
+          <input id="editHeroBadge" maxlength="80" placeholder="STUDIO PROFESIONAL DE UÑAS">
+        </div>
+
+        <div class="form-field">
+          <label for="editHeroTitle">Título principal (Línea 1)</label>
+          <input id="editHeroTitle" required maxlength="80" placeholder="Arte, elegancia y">
+        </div>
+
+        <div class="form-field">
+          <label for="editHeroTitleItalic">Título destacado / Cursiva (Línea 2)</label>
+          <input id="editHeroTitleItalic" required maxlength="80" placeholder="durabilidad en tus manos.">
+        </div>
+
+        <div class="form-field form-full">
+          <label for="editHeroSubtitle">Párrafo de presentación (Subtítulo)</label>
+          <textarea id="editHeroSubtitle" rows="3" maxlength="350" placeholder="Describe tu propuesta de valor y experiencia."></textarea>
+        </div>
+
+        <!-- CONFIGURACIÓN DE DISPONIBILIDAD DE AGENDA -->
+        <div class="form-field form-full" style="background:var(--surface-alt);padding:14px;border-radius:var(--radius-md);border:1.5px solid var(--border-subtle);margin-top:6px;">
+          <label for="editAgendaStatus" style="font-weight:700;color:var(--lilac-950);">Estado y color de la Agenda:</label>
+          <select id="editAgendaStatus" style="width:100%;padding:10px 14px;border-radius:var(--radius-sm);border:1px solid var(--border-subtle);background:#ffffff;font-size:0.92rem;margin-top:6px;font-weight:600;">
+            <option value="abierta">🟢 Agenda abierta (Disponible - Verde)</option>
+            <option value="cerrada">🔴 Agenda no disponible (Cerrada / Cupos llenos - Rojo)</option>
+          </select>
+          <small style="display:block;margin-top:6px;color:var(--ink-muted);">Cuando elijas <strong>"Agenda no disponible"</strong>, la pastilla se pondrá automáticamente en rojo con su punto rojo brillante.</small>
+
+          <div style="margin-top:12px;">
+            <label for="editAgendaStatusText" style="font-size:0.85rem;font-weight:600;">Texto que se mostrará en la pastilla:</label>
+            <input id="editAgendaStatusText" maxlength="45" placeholder="Ej. Agenda abierta, Agenda no disponible, Cupos agotados...">
+          </div>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="logoFileInput">Cambiar imagen del Logo (Opcional)</label>
+          <input type="file" id="logoFileInput" accept="image/*">
+          <small>Sube una foto o logo desde tu dispositivo para reemplazar el logo actual.</small>
+          <div class="img-preview-box" id="logoPreviewBox" style="display:none;">
+            <img src="" alt="Previsualización del logo" id="logoPreviewImg">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button-primary" type="submit">Guardar Cambios</button>
+        <button type="button" class="button button-outline" id="cancelHeroEdit">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- 5. COTIZADOR PRICES EDIT MODAL (ADMIN) -->
+  <dialog id="calcEditDialog" class="dialog">
+    <form id="calcEditForm" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">TARIFAS Y PRECIOS</span>
+          <h2>Editar Precios del Cotizador</h2>
+          <p class="dialog-subtitle">Ajusta los valores en COP para cada técnica base, largo y decoración adicional.</p>
+        </div>
+        <button type="button" class="icon-button" id="closeCalcEditDialog" aria-label="Cerrar modal">×</button>
+      </div>
+
+      <h4 style="color:var(--lilac-800);margin:14px 0 8px;font-size:0.95rem;">1. Técnicas Base (COP)</h4>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="calcPriceAcrilicas">Acrílicas Esculpidas</label>
+          <input id="calcPriceAcrilicas" inputmode="numeric" required placeholder="75000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceSemi">Semipermanente con nivelación</label>
+          <input id="calcPriceSemi" inputmode="numeric" required placeholder="45000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceKapping">Kapping / Nivelación</label>
+          <input id="calcPriceKapping" inputmode="numeric" required placeholder="55000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceSoftgel">Soft Gel / Gel X</label>
+          <input id="calcPriceSoftgel" inputmode="numeric" required placeholder="65000">
+        </div>
+      </div>
+
+      <h4 style="color:var(--lilac-800);margin:18px 0 8px;font-size:0.95rem;">2. Recargos por Largo (COP)</h4>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="calcPriceLenMedio">Largo Medio (N° 2-3)</label>
+          <input id="calcPriceLenMedio" inputmode="numeric" required placeholder="10000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceLenLargo">Largo N° 4-5</label>
+          <input id="calcPriceLenLargo" inputmode="numeric" required placeholder="20000">
+        </div>
+        <div class="form-field form-full">
+          <label for="calcPriceLenExtra">Largo Extra N° 6+</label>
+          <input id="calcPriceLenExtra" inputmode="numeric" required placeholder="30000">
+        </div>
+      </div>
+
+      <h4 style="color:var(--lilac-800);margin:18px 0 8px;font-size:0.95rem;">3. Decoraciones & Extras (COP)</h4>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="calcPriceFrench">Francesa / Baby Boomer</label>
+          <input id="calcPriceFrench" inputmode="numeric" required placeholder="12000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceCromo">Efecto Cromo / Glazed</label>
+          <input id="calcPriceCromo" inputmode="numeric" required placeholder="15000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceCristales">Cristales & Pedrería</label>
+          <input id="calcPriceCristales" inputmode="numeric" required placeholder="15000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceNailart">Nail Art Mano Alzada</label>
+          <input id="calcPriceNailart" inputmode="numeric" required placeholder="18000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceRetiro">Retiro de sistema previo</label>
+          <input id="calcPriceRetiro" inputmode="numeric" required placeholder="15000">
+        </div>
+        <div class="form-field">
+          <label for="calcPriceDomicilio">Servicio a Domicilio</label>
+          <input id="calcPriceDomicilio" inputmode="numeric" required placeholder="15000">
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button-primary" type="submit">Actualizar Tarifas</button>
+        <button type="button" class="button button-outline" id="cancelCalcEdit">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- 6. GALLERY UPLOAD PHOTO MODAL (ADMIN) -->
+  <dialog id="galleryUploadDialog" class="dialog">
+    <form id="galleryUploadForm" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">PORTAFOLIO</span>
+          <h2>Subir Nueva Foto a la Galería</h2>
+          <p class="dialog-subtitle">Agrega tus propios trabajos y diseños realizados para que tus clientas se inspiren.</p>
+        </div>
+        <button type="button" class="icon-button" id="closeGalleryUploadDialog" aria-label="Cerrar modal">×</button>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field form-full">
+          <label for="galleryPhotoFile">Seleccionar Foto desde el Dispositivo *</label>
+          <input type="file" id="galleryPhotoFile" accept="image/*">
+          <small>Se optimizará automáticamente para cargar súper rápido.</small>
+          <div class="img-preview-box" id="galleryPhotoPreviewBox" style="display:none;">
+            <img src="" alt="Previsualización" id="galleryPhotoPreviewImg">
+          </div>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="galleryPhotoUrl">O ingresar enlace / URL de imagen de internet</label>
+          <input type="url" id="galleryPhotoUrl" placeholder="https://ejemplo.com/foto-uñas.jpg">
+        </div>
+
+        <div class="form-field">
+          <label for="galleryPhotoTitle">Nombre del Diseño *</label>
+          <input id="galleryPhotoTitle" required maxlength="80" placeholder="Ej. Acrílicas Almendra Nude">
+        </div>
+
+        <div class="form-field">
+          <label for="galleryPhotoCategory">Categoría</label>
+          <select id="galleryPhotoCategory">
+            <option value="glam">Glam & Cristales</option>
+            <option value="clean">Clean & Nude</option>
+            <option value="french">French Moderno</option>
+            <option value="art">Artístico</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="galleryPhotoTechnique">Técnica aplicada</label>
+          <input id="galleryPhotoTechnique" maxlength="80" placeholder="Ej. Acrílico esculpido + Cristales">
+        </div>
+
+        <div class="form-field">
+          <label for="galleryPhotoTime">Tiempo de elaboración</label>
+          <input id="galleryPhotoTime" maxlength="50" placeholder="Ej. 1 hora y 45 min">
+        </div>
+
+        <div class="form-field form-full">
+          <label for="galleryPhotoDesc">Descripción del diseño</label>
+          <textarea id="galleryPhotoDesc" rows="2" maxlength="250" placeholder="Escribe los detalles o tonos utilizados."></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button-primary" type="submit">Agregar a la Galería</button>
+        <button type="button" class="button button-outline" id="cancelGalleryUpload">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- 7. ADD TESTIMONIAL MODAL (ADMIN) -->
+  <dialog id="testimonialDialog" class="dialog">
+    <form id="testimonialForm" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">OPINIONES</span>
+          <h2>Agregar Testimonio de Clienta</h2>
+          <p class="dialog-subtitle">Publica las buenas experiencias de tus clientas para generar confianza.</p>
+        </div>
+        <button type="button" class="icon-button" id="closeTestimonialDialog" aria-label="Cerrar modal">×</button>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="testiName">Nombre de la clienta *</label>
+          <input id="testiName" required maxlength="80" placeholder="Ej. Mariana Gómez">
+        </div>
+
+        <div class="form-field">
+          <label for="testiService">Servicio o detalle *</label>
+          <input id="testiService" required maxlength="80" placeholder="Ej. Acrílicas esculpidas baby boomer">
+        </div>
+
+        <div class="form-field form-full">
+          <label for="testiStars">Calificación</label>
+          <select id="testiStars">
+            <option value="★★★★★" selected>★★★★★ (5 estrellas - Excelente)</option>
+            <option value="★★★★☆">★★★★☆ (4 estrellas - Muy bueno)</option>
+          </select>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="testiQuote">Comentario / Opinión de la clienta *</label>
+          <textarea id="testiQuote" required rows="3" maxlength="300" placeholder="Escribe lo que dijo la clienta sobre su experiencia y el resultado de sus uñas."></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button-primary" type="submit">Publicar Testimonio</button>
+        <button type="button" class="button button-outline" id="cancelTestimonial">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- 8. AFTERCARE TIPS EDIT MODAL (ADMIN) -->
+  <dialog id="aftercareDialog" class="dialog">
+    <form id="aftercareForm" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">CONSEJOS DE CUIDADO</span>
+          <h2>Modificar Guía de Cuidados</h2>
+          <p class="dialog-subtitle">Personaliza las recomendaciones para que tus clientas cuiden su manicura.</p>
+        </div>
+        <button type="button" class="icon-button" id="closeAftercareDialog" aria-label="Cerrar modal">×</button>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field form-full">
+          <label for="tip1Title">Consejo 1: Título</label>
+          <input id="tip1Title" required maxlength="80">
+          <textarea id="tip1Desc" rows="2" maxlength="220"></textarea>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="tip2Title">Consejo 2: Título</label>
+          <input id="tip2Title" required maxlength="80">
+          <textarea id="tip2Desc" rows="2" maxlength="220"></textarea>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="tip3Title">Consejo 3: Título</label>
+          <input id="tip3Title" required maxlength="80">
+          <textarea id="tip3Desc" rows="2" maxlength="220"></textarea>
+        </div>
+
+        <div class="form-field form-full">
+          <label for="tip4Title">Consejo 4: Título</label>
+          <input id="tip4Title" required maxlength="80">
+          <textarea id="tip4Desc" rows="2" maxlength="220"></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button-primary" type="submit">Guardar Consejos</button>
+        <button type="button" class="button button-outline" id="cancelAftercare">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- 9. BUSINESS HOURS EDIT MODAL (ADMIN) -->
+  <dialog id="hoursEditDialog" class="dialog">
+    <form id="hoursEditForm" method="dialog">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow">HORARIO DE ATENCIÓN</span>
+          <h2>Modificar Horario de Atención</h2>
+          <p class="dialog-subtitle">Actualiza los días y horas de atención que verán tus clientas en toda la web.</p>
+        </div>
+        <button type="button" class="icon-button" id="closeHoursEditDialog" aria-label="Cerrar modal">×</button>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field form-full">
+          <label for="editHoursText">Horario principal de atención *</label>
+          <input id="editHoursText" required maxlength="120" placeholder="Ej. Lunes a Sábado: 8:30 a. m. - 7:00 p. m.">
+          <small>Este horario se actualizará automáticamente en el banner, la barra superior y los datos de contacto.</small>
+        </div>
+
+        <div class="form-field form-full">
+          <label>Opciones rápidas para elegir con un clic:</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
+            <button type="button" class="button button-outline button-xs" id="quickHoursPreset1">Lun a Sáb: 8:30 am - 7:00 pm</button>
+            <button type="button" class="button button-outline button-xs" id="quickHoursPreset2">Lun a Sáb: 9:00 am - 6:00 pm</button>
+            <button type="button" class="button button-outline button-xs" id="quickHoursPreset3">Mar a Dom: 10:00 am - 8:00 pm</button>
+            <button type="button" class="button button-outline button-xs" id="quickHoursPreset4">Todos los días con cita previa</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button-primary" type="submit">Guardar Horario</button>
+        <button type="button" class="button button-outline" id="cancelHoursEdit">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- TOAST NOTIFICATION FLOATING CONTAINER -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Main JavaScript Application -->
+  <script src="app.js"></script>
+</body>
+</html>
